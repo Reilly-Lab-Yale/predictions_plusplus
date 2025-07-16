@@ -44,7 +44,7 @@ echo "[*] Output ${output}"
 echo "[+] Running!"
 
 #invoke actual script
-python "${scratch_root}/sumner_pulldown/boda2/src/vcf_predict.py" \
+python "/home/mcn26/project_pi_skr2/mcn26/boda2/src/vcf_predict.py" \
 --artifact_path ${models} \
 --use_vmap TRUE \
 --vcf_file ${vcf_file} \
