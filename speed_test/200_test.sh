@@ -11,7 +11,7 @@
 module load miniconda
 module load CUDA/12.6.0
 module load GCC/13.3.0
-conda activate boda_fullnuts
+conda activate bodacu90
 
 chr_pair="chr1_chr22"
 chunk="0"
