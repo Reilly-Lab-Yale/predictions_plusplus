@@ -25,8 +25,8 @@ output_dir="${scratch_root}/output/${chr_pair}"
 mkdir -p $output_dir
 
 #make a working directory for just this instance to play in...
-mkdir -p "./chr9_14/chunk_${chunk}"
-cd "./chr9_14/chunk_${chunk}"
+mkdir -p "./${chr_pair}/chunk_${chunk}"
+cd "./${chr_pair}/chunk_${chunk}"
 
 ## define & echo the parameters for debugging
 
