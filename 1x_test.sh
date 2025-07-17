@@ -7,9 +7,7 @@
 #SBATCH -t 4:00:00
 
 module load miniconda
-module load CUDA/12.6.0
-module load GCC/13.3.0
-conda activate boda_fresh
+conda activate boda_cu128
 
 chr_pair="chr9_chr14"
 chunk="0"
