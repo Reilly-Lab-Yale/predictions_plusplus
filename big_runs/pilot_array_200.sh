@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=mpac_test
+#SBATCH --job-name=mpac_pilot
 #SBATCH --partition=gpu_h200
 #SBATCH --gpus 1
 #SBATCH -c 1
@@ -8,9 +8,7 @@
 #SBATCH --array=0-227
 
 module load miniconda
-module load CUDA/12.6.0
-module load GCC/13.3.0
-conda activate boda_fresh
+conda activate boda_cu128
 
 chr_pair="chr3_chr20"
 chunk="${SLURM_ARRAY_TASK_ID}"
