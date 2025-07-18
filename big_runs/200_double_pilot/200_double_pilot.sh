@@ -2,8 +2,8 @@
 #SBATCH --job-name=2_21
 #SBATCH --partition=gpu_h200
 #SBATCH --gpus 2
-#SBATCH -c 1
-#SBATCH --mem-per-cpu=64G
+#SBATCH -c 4
+#SBATCH --mem-per-cpu=32G
 #SBATCH -t 6:00:00
 #SBATCH --array=0-117
 
