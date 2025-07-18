@@ -6,7 +6,7 @@
 #SBATCH --gpus 1
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=64G
-#SBATCH -t 4:00:00
+#SBATCH -t 6:00:00
 
 module load miniconda
 conda activate boda_cu128
