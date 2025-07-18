@@ -1,11 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=2_21
 #SBATCH --partition=gpu_h200
-#SBATCH --gpus 2
-#SBATCH -c 4
-#SBATCH --mem-per-cpu=32G
+#SBATCH --ntasks=3
+#SBATCH --gres=gpu:1
+#SBATCH -c 8
+#SBATCH --mem=64G
 #SBATCH -t 6:00:00
-#SBATCH --array=0-117
+#SBATCH --array=0-75
+
 
 module load miniconda
 conda activate boda_cu128
@@ -21,33 +23,41 @@ models=$(find $model_root -maxdepth 1 -type f -printf "%f\n" | sed "s|^|$model_r
 output_dir="${scratch_root}/output/${chr_pair}"
 mkdir -p $output_dir
 
-# Loop over the two chunks
-for i in 0 1; do
-    chunk=$((SLURM_ARRAY_TASK_ID * 2 + i))
-    (
-        export CUDA_VISIBLE_DEVICES=$i  # Assign GPU 0 to first chunk, GPU 1 to second
-        mkdir -p "./${chr_pair}/chunk_${chunk}"
-        cd "./${chr_pair}/chunk_${chunk}"
+base_chunk=$((SLURM_ARRAY_TASK_ID * SLURM_NTASKS))
 
-        vcf_file="${scratch_root}/sumner_pulldown/${chr_pair}/GRCh38-dELS-${chr_pair}chunk_${chunk}.tsv"
-        fasta_file="${scratch_root}/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
-        output="${output_dir}/chunk_${chunk}.vcf"
+for i in $(seq 0 $((SLURM_NTASKS - 1))); do
+    chunk=$((base_chunk + i))
+    srun --ntasks=1 --exclusive bash -c '
+    chunk='"$chunk"'
+    chr_pair='"$chr_pair"'
+    scratch_root='"$scratch_root"'
+    model_root='"$model_root"'
+    output_dir='"$output_dir"'
+    models="'"$models"'"
 
-        echo "[*] Running chunk ${chunk} on GPU $i"
-        python "${scratch_root}/sumner_pulldown/boda2/src/vcf_predict.py" \
-            --artifact_path ${models} \
-            --use_vmap TRUE \
-            --vcf_file ${vcf_file} \
-            --fasta_file ${fasta_file} \
-            --output ${output} \
-            --relative_start 9 \
-            --relative_end 181 \
-            --step_size 10 \
-            --raw_predictions FALSE \
-            --strand_reduction mean \
-            --window_reduction mean \
-            --feature_ids K562 HepG2 SKNSH
-    ) &
+    echo "[+] Making ./${chr_pair}/chunk_${chunk} "
+    mkdir -p "./${chr_pair}/chunk_${chunk}"
+    cd "./${chr_pair}/chunk_${chunk}"
+
+    vcf_file="${scratch_root}/sumner_pulldown/${chr_pair}/GRCh38-dELS-${chr_pair}chunk_${chunk}.tsv"
+    fasta_file="${scratch_root}/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
+    output="${output_dir}/chunk_${chunk}.vcf"
+
+    echo "[*] Running chunk ${chunk} on host: $(hostname) with CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}"
+    python "${scratch_root}/sumner_pulldown/boda2/src/vcf_predict.py" \
+        --artifact_path ${models} \
+        --use_vmap TRUE \
+        --vcf_file ${vcf_file} \
+        --fasta_file ${fasta_file} \
+        --output ${output} \
+        --relative_start 9 \
+        --relative_end 181 \
+        --step_size 10 \
+        --raw_predictions FALSE \
+        --strand_reduction mean \
+        --window_reduction mean \
+        --feature_ids K562 HepG2 SKNSH
+    ' > "/home/mcn26/project_pi_skr2/mcn26/predictions_plusplus/big_runs/200_double_pilot/chunk_${chunk}.out" 2>&1 &
 done
 
 wait
