@@ -21,13 +21,16 @@ output_root="/home/mcn26/project_pi_skr2/mcn26/clinical_predictions"
 
 chr_pair=${chromosome_pairs[${SLURM_ARRAY_TASK_ID}]}
 
+mkdir $chr_pair
+cd $chr_pair
+
 #path where all the model artifact tgzs are
 model_root="${scratch_root}/sumner_pulldown/boda_ensembl_models/${chr_pair}"
 #get all model artifact tgzs
 models=$(find $model_root -maxdepth 1 -type f -printf "%f\n" | sed "s|^|$model_root/|" | paste -sd " " -)
 
 
-vcf_file="${input_root}/${chr_pair}"
+vcf_file="${input_root}/${chr_pair}.tsv"
 fasta_file="${scratch_root}/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
 output="${output_root}/${chr_pair}.vcf"
 
