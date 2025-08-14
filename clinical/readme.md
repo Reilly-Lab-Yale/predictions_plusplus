@@ -1,0 +1,1 @@
+Clinical variants retrieved from mccleary /home/skr2/project/Bale_preds/bale_freq_Jul2025.vcf 
