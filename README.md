@@ -7,3 +7,5 @@ All predictions performed on NVIDIA H200 GPUs.
 Using : [a slightly modified version of boda2](https://github.com/saarantras/boda2). Currently modifications are all in branch "allow_untrusted" (will update if this is merged).
 
 Using : https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15/
+
+'satmut' is saturation mutagenesis
