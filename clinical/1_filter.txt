@@ -1,0 +1,14 @@
+removing unpredictable variants containing asterixes
+
+```
+cat single_file_processed_variants.tsv | grep -v '*' > single_file_processed_variants_nostar.tsv
+```
+
+```
+[mcn26@login2.bouchet mcn26]$ wc -l single_file_processed_variants.tsv
+7232525 single_file_processed_variants.tsv
+[mcn26@login2.bouchet mcn26]$ wc -l single_file_processed_variants_nostar.tsv
+7226335 single_file_processed_variants_nostar.tsv
+```
+
+So we lost a total of 7232525-7226335=6190 variants

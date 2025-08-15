@@ -1,0 +1,60 @@
+Used https://genome.ucsc.edu/cgi-bin/hgLiftOver on 2025-08-15
+with settings
+- human,hg19->38
+- 95% of bases must remap
+- Disallow multiple output regions.
+
+Produced failures_hglft_genome_260750_f5a970.err.gz & hglft_genome_260750_f5a970.bed.gz
+
+(prepending "chr" to MT variants broke them for liftover, but we don't care since they were going to get filtered at a later step.)
+
+Examining failures, the file looks something like:
+
+```
+#Deleted in new
+chr1    1566067 1566068 1_1566068_A_*
+#Deleted in new
+chr1    1566067 1566068 1_1566068_A_G
+#Deleted in new
+chr1    1570921 1570922 1_1570922_T_TCTCCGCCCTG
+#Deleted in new
+chr1    1581557 1581558 1_1581558_C_T
+#Deleted in new
+chr1    1581585 1581586 1_1581586_T_C
+#Deleted in new
+chr1    1585596 1585597 1_1585597_A_G
+#Deleted in new
+chr1    1585641 1585642 1_1585642_G_T
+#Deleted in new
+chr1    1594840 1594841 1_1594841_A_ACGGGGAGGTGGACAAGG
+```
+
+First, let's combine the code into the variant as a new column:
+
+```
+zcat /home/mcn26/project_pi_skr2/mcn26/failures_hglft_genome_260750_f5a970.err.gz | awk 'BEGIN {OFS="\t"} 
+/^#/ {status = substr($0, 2); next}  # strip '#' and store status
+{print $0, status}' > /home/mcn26/project_pi_skr2/mcn26/err_munged
+```
+
+Let's see what reasons they are failing for
+
+```
+cut -f5 /home/mcn26/project_pi_skr2/mcn26/err_munged | sort | uniq -c
+```
+
+```
+10146 Deleted in new
+```
+
+Let's count how many variants are actually lost
+
+```
+cat err_munged | grep -v "^chrMT" | grep -v "^chrX" | grep -v "^chrY" | wc -l
+```
+
+```
+2499
+```
+
+Not so bad!

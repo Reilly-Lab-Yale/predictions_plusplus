@@ -1,0 +1,31 @@
+Now that we have lifted over variant locations, we need to transform this into the format the predictor wants.
+
+Chr1        T   A   C   G   T
+          | | | | | | | | | |
+1 based   | 1 | 2 | 3 | 4 | 5
+
+0 based   0   1   2   3   4
+
+
+Currently, we have a file that looks like:
+```
+chr1    17256   17257   1_17257_G_A
+chr1    17288   17289   1_17289_CCT_C
+chr1    17299   17300   1_17300_GC_G
+chr1    17301   17302   1_17302_C_T
+chr1    17315   17316   1_17316_G_T
+```
+
+We want a format like:
+```
+chr1	1_17257_G_A	17257	G	A
+```
+(pos, name, ref, alt)
+
+We leave the original chromosomal coordinate in the name, and use the lifted-over one in the pos column.
+We are converting from pseudo-bed (0-based) back to vcf (1-based). So we want the second coordinate.
+
+```
+conda activate speedracer
+zcat /home/mcn26/project_pi_skr2/mcn26/hglft_genome_260750_f5a970.bed.gz | pypy3 2_remerge.py > /home/mcn26/project_pi_skr2/mcn26/single_file_processed_variants.tsv
+```
