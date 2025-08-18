@@ -5,8 +5,8 @@ def main():
         line=line.rstrip('\n').split('\t')
         output=[]
         output.append(line[0])#chromosome
-        output.append(line[3])#name, containing hg19 position
         output.append(line[2])#position
+        output.append(line[3])#name, containing hg19 position
         #now we need to extract the ref and alt variants from the name
         split_name=line[3].split("_")
         #this will have chr, pos, ref, alt

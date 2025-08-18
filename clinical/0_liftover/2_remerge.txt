@@ -18,12 +18,12 @@ chr1    17315   17316   1_17316_G_T
 
 We want a format like:
 ```
-chr1	1_17257_G_A	17257	G	A
+chr1	17257	1_17257_G_A	G	A
 ```
-(pos, name, ref, alt)
+(chr, pos, name, ref, alt)
 
 We leave the original chromosomal coordinate in the name, and use the lifted-over one in the pos column.
-We are converting from pseudo-bed (0-based) back to vcf (1-based). So we want the second coordinate.
+We are converting from pseudo-bed (0-based) back to vcf (1-based). So we want the second coordinate column in the bed.
 
 ```
 conda activate speedracer
