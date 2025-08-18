@@ -3,9 +3,11 @@
 #SBATCH --partition=gpu_h200
 #SBATCH --gres=gpu:1
 #SBATCH -c 2
-#SBATCH --mem=64G
-#SBATCH -t 1:45:00
-#SBATCH --array=0-10
+#SBATCH --mem=128G
+#SBATCH -t 3:45:00
+#SBATCH --array=0,3,5,6,10
+
+####SBATCH --array=0-10
 
 module load miniconda
 conda activate boda_cu128
