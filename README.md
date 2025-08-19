@@ -25,3 +25,6 @@ Some minor data carpentry tasks use the `speedracer` environment.
 
 
 'satmut' is saturation mutagenesis
+
+
+Maintained by Mackenzie Noon. Conatct corresponding authors, or through github or mackenzie dot noon at yale dot edu.
