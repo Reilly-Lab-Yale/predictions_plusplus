@@ -3,7 +3,7 @@
 #SBATCH --partition=gpu_h200
 #SBATCH --gres=gpu:1
 #SBATCH -c 2
-#SBATCH --mem=32G
+#SBATCH --mem=65G
 #SBATCH -t 0:45:00
 
 
