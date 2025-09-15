@@ -28,12 +28,13 @@ models=$(find $model_root -maxdepth 1 -type f -printf "%f\n" | sed "s|^|$model_r
 
 vcf_file="${input_root}/k562_emvar_indel_sample.tsv"
 fasta_file="${scratch_root}/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
-output="${output_root}/k562_emvar_indel_sample_predictions.tsv"
+output="${output_root}/k562_emvar_indel_sample_predictions.pt"
 
 
 echo "[*] Running pair ${chr_pair} on host: $(hostname) with CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}"
 python "${scratch_root}/sumner_pulldown/boda2/src/vcf_predict.py" \
 --artifact_path ${models} \
+--raw_predictions TRUE \
 --use_vmap TRUE \
 --vcf_file ${vcf_file} \
 --fasta_file ${fasta_file} \
@@ -41,7 +42,6 @@ python "${scratch_root}/sumner_pulldown/boda2/src/vcf_predict.py" \
 --relative_start 9 \
 --relative_end 181 \
 --step_size 10 \
---raw_predictions FALSE \
 --strand_reduction mean \
 --window_reduction mean \
 --feature_ids K562 HepG2 SKNSH

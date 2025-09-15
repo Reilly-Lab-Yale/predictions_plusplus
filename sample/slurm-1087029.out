@@ -1,0 +1,51 @@
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+[*] Running pair chr7_chr16 on host: a1126u19n01.mghpcc.ycrc.yale.edu with CUDA_VISIBLE_DEVICES=0
+/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/lightning/fabric/__init__.py:29: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__("pkg_resources").declare_namespace(__name__)
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda2/src/vcf_predict.py:102: FutureWarning: We've integrated functorch into PyTorch. As the final step of the integration, `functorch.combine_state_for_ensemble` is deprecated as of PyTorch 2.0 and will be deleted in a future version of PyTorch >= 2.3. Please use `torch.func.stack_module_state` instead; see the PyTorch 2.0 release notes and/or the `torch.func` migration guide for more details https://pytorch.org/docs/main/func.migrating.html
+  self.fmodel, self.params, self.buffers = combine_state_for_ensemble(models)
+pre-reading fasta into memory
+['/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda2/src/vcf_predict.py', '--artifact_path', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230111_234041__233096.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_005920__369226.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_011949__620636.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_015315__170342.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_023015__950528.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_023239__627813.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_032324__192945.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_033504__678937.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_042513__545458.tar.gz', '/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda_ensembl_models/chr7_chr16/model_artifacts__20230112_050443__633662.tar.gz', '--raw_predictions', 'TRUE', '--use_vmap', 'TRUE', '--vcf_file', '/home/mcn26/project_pi_skr2/mcn26/k562_emvar_indel_sample.tsv', '--fasta_file', '/home/mcn26/scratch_pi_skr2/mcn26/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta', '--output', '/home/mcn26/project_pi_skr2/mcn26//k562_emvar_indel_sample_predictions.pt', '--relative_start', '9', '--relative_end', '181', '--step_size', '10', '--strand_reduction', 'mean', '--window_reduction', 'mean', '--feature_ids', 'K562', 'HepG2', 'SKNSH']
+Loaded model from 20230111_234041 in eval mode
+Loaded model from 20230112_005920 in eval mode
+Loaded model from 20230112_011949 in eval mode
+Loaded model from 20230112_015315 in eval mode
+Loaded model from 20230112_023015 in eval mode
+Loaded model from 20230112_023239 in eval mode
+Loaded model from 20230112_032324 in eval mode
+Loaded model from 20230112_033504 in eval mode
+Loaded model from 20230112_042513 in eval mode
+Loaded model from 20230112_050443 in eval mode
+  0%|          | 0/44284892 [00:00<?, ?it/s]  1%|          | 506493/44284892 [00:00<00:08, 5064596.73it/s]  3%|▎         | 1237800/44284892 [00:00<00:06, 6387106.24it/s]  4%|▍         | 1915197/44284892 [00:00<00:06, 6563648.14it/s]  6%|▌         | 2701409/44284892 [00:00<00:05, 7076174.58it/s]  8%|▊         | 3517811/44284892 [00:00<00:05, 7468369.91it/s] 10%|▉         | 4350261/44284892 [00:00<00:05, 7759362.88it/s] 12%|█▏        | 5191302/44284892 [00:00<00:04, 7972110.09it/s] 14%|█▎        | 6041223/44284892 [00:00<00:04, 8139751.61it/s] 16%|█▌        | 6895478/44284892 [00:00<00:04, 8265615.85it/s] 18%|█▊        | 7752460/44284892 [00:01<00:04, 8359474.72it/s] 19%|█▉        | 8611938/44284892 [00:01<00:04, 8431435.84it/s] 21%|██▏       | 9474289/44284892 [00:01<00:04, 8489806.61it/s] 23%|██▎       | 10337384/44284892 [00:01<00:03, 8532510.12it/s] 25%|██▌       | 11202291/44284892 [00:01<00:03, 8567657.03it/s] 27%|██▋       | 12071537/44284892 [00:01<00:03, 8605228.89it/s] 29%|██▉       | 12939390/44284892 [00:01<00:03, 8627245.15it/s] 31%|███       | 13802115/44284892 [00:01<00:03, 8078827.61it/s] 33%|███▎      | 14623903/44284892 [00:01<00:03, 8118663.48it/s] 35%|███▍      | 15440899/44284892 [00:01<00:03, 7896701.05it/s] 37%|███▋      | 16288439/44284892 [00:02<00:03, 8062934.14it/s] 39%|███▊      | 17141099/44284892 [00:02<00:03, 8197823.71it/s] 41%|████      | 17997985/44284892 [00:02<00:03, 8306728.86it/s] 43%|████▎     | 18859116/44284892 [00:02<00:03, 8396683.71it/s] 45%|████▍     | 19723888/44284892 [00:02<00:02, 8471158.95it/s] 46%|████▋     | 20585953/44284892 [00:02<00:02, 8515629.77it/s] 48%|████▊     | 21454649/44284892 [00:02<00:02, 8566692.16it/s] 50%|█████     | 22322192/44284892 [00:02<00:02, 8599136.15it/s] 52%|█████▏    | 23191294/44284892 [00:02<00:02, 8626578.05it/s] 54%|█████▍    | 24063709/44284892 [00:02<00:02, 8655719.33it/s] 56%|█████▋    | 24936707/44284892 [00:03<00:02, 8677903.73it/s] 58%|█████▊    | 25804683/44284892 [00:03<00:02, 8509536.01it/s] 60%|██████    | 26656485/44284892 [00:03<00:02, 8156966.65it/s] 62%|██████▏   | 27475495/44284892 [00:03<00:02, 8155982.24it/s] 64%|██████▍   | 28293409/44284892 [00:03<00:02, 7933819.84it/s] 66%|██████▌   | 29137903/44284892 [00:03<00:01, 8080969.31it/s] 68%|██████▊   | 29992729/44284892 [00:03<00:01, 8217146.79it/s] 70%|██████▉   | 30850880/44284892 [00:03<00:01, 8324186.75it/s] 72%|███████▏  | 31713607/44284892 [00:03<00:01, 8413780.82it/s] 74%|███████▎  | 32570144/44284892 [00:03<00:01, 8458749.87it/s] 75%|███████▌  | 33432040/44284892 [00:04<00:01, 8506426.67it/s] 77%|███████▋  | 34300800/44284892 [00:04<00:01, 8560454.78it/s] 79%|███████▉  | 35168822/44284892 [00:04<00:01, 8596202.36it/s] 81%|████████▏ | 36037781/44284892 [00:04<00:00, 8624104.46it/s] 83%|████████▎ | 36900455/44284892 [00:04<00:00, 8621547.28it/s] 85%|████████▌ | 37771443/44284892 [00:04<00:00, 8647955.43it/s] 87%|████████▋ | 38644626/44284892 [00:04<00:00, 8673020.17it/s] 89%|████████▉ | 39512024/44284892 [00:04<00:00, 8468739.13it/s] 91%|█████████ | 40360018/44284892 [00:04<00:00, 8142699.20it/s] 93%|█████████▎| 41177325/44284892 [00:04<00:00, 7952103.45it/s] 95%|█████████▍| 41999433/44284892 [00:05<00:00, 8029118.09it/s] 97%|█████████▋| 42852460/44284892 [00:05<00:00, 8174616.95it/s] 99%|█████████▊| 43708367/44284892 [00:05<00:00, 8287301.42it/s]100%|██████████| 44284892/44284892 [00:05<00:00, 8259993.52it/s]
+finding keys
+parsing
+  0%|          | 0/195 [00:00<?, ?it/s]  1%|          | 1/195 [00:26<1:24:57, 26.28s/it]  1%|          | 2/195 [00:52<1:23:46, 26.04s/it]  2%|▏         | 3/195 [01:13<1:16:08, 23.79s/it]  2%|▏         | 4/195 [01:33<1:11:12, 22.37s/it]  3%|▎         | 5/195 [01:52<1:07:26, 21.30s/it]  3%|▎         | 6/195 [02:10<1:03:41, 20.22s/it]  4%|▎         | 7/195 [02:27<59:55, 19.12s/it]    4%|▍         | 8/195 [02:43<55:47, 17.90s/it]  5%|▍         | 9/195 [02:57<51:59, 16.77s/it]  5%|▌         | 10/195 [03:11<49:07, 15.93s/it]  6%|▌         | 11/195 [03:25<47:12, 15.40s/it]  6%|▌         | 12/195 [03:39<45:34, 14.94s/it]  7%|▋         | 13/195 [03:51<42:24, 13.98s/it]  7%|▋         | 14/195 [04:02<39:31, 13.10s/it]  8%|▊         | 15/195 [04:12<36:50, 12.28s/it]  8%|▊         | 16/195 [04:22<33:57, 11.38s/it]  9%|▊         | 17/195 [04:30<31:25, 10.59s/it]  9%|▉         | 18/195 [04:39<29:21,  9.95s/it] 10%|▉         | 19/195 [04:45<25:48,  8.80s/it] 10%|█         | 20/195 [04:52<23:51,  8.18s/it] 11%|█         | 21/195 [04:56<20:47,  7.17s/it] 11%|█▏        | 22/195 [05:02<18:51,  6.54s/it] 12%|█▏        | 23/195 [05:18<27:10,  9.48s/it] 12%|█▏        | 24/195 [05:23<23:39,  8.30s/it] 18%|█▊        | 36/195 [05:24<03:35,  1.36s/it] 23%|██▎       | 45/195 [05:24<01:48,  1.39it/s] 27%|██▋       | 53/195 [05:24<01:04,  2.19it/s] 30%|███       | 59/195 [05:24<00:46,  2.94it/s] 41%|████      | 79/195 [05:24<00:17,  6.82it/s] 59%|█████▉    | 115/195 [05:24<00:04, 16.43it/s] 89%|████████▊ | 173/195 [05:24<00:00, 37.46it/s]100%|██████████| 195/195 [05:25<00:00,  1.67s/it]
+done
+loading DataFrame
+loaded shape: (100, 5)
+Checking and filtering tokens
+passed shape: (100, 5)
+Allele length checks
+final shape: (100, 5)
+Done
+100/100 records have matching contig in FASTA
+returned 100/100 records
+Dataset length: 100, VCF length: (100, 5)
+  0%|          | 0/10 [00:00<?, ?it/s]/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda2/src/vcf_predict.py:201: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/mcn26/scratch_pi_skr2/mcn26/sumner_pulldown/boda2/src/vcf_predict.py:114: FutureWarning: We've integrated functorch into PyTorch. As the final step of the integration, `functorch.vmap` is deprecated as of PyTorch 2.0 and will be deleted in a future version of PyTorch >= 2.3. Please use `torch.vmap` instead; see the PyTorch 2.0 release notes and/or the `torch.func` migration guide for more details https://pytorch.org/docs/main/func.migrating.html
+  preds = vmap(self.fmodel, in_dims=(0, 0, None))(self.params, self.buffers, batch)
+ 10%|█         | 1/10 [00:00<00:03,  2.60it/s] 30%|███       | 3/10 [00:00<00:01,  6.06it/s] 50%|█████     | 5/10 [00:00<00:00,  8.00it/s] 70%|███████   | 7/10 [00:00<00:00,  9.19it/s] 90%|█████████ | 9/10 [00:01<00:00,  9.96it/s]100%|██████████| 10/10 [00:01<00:00,  8.55it/s]
+[+] Finished!
