@@ -19,7 +19,7 @@ def main():
         line=line.decode()
         line=line.rstrip('\n').split('\t')
         #output cols are chrom, pos, name, ref, alt
-        output=line[0:4]
+        output=line[0:5]
         output_file.write("\t".join(output))
         output_file.write("\n")
 
