@@ -1,0 +1,52 @@
+[+] Making ./chr1/chunk_194
+[*] Running chunk 194 on host: a1124u19n01.mghpcc.ycrc.yale.edu with CUDA_VISIBLE_DEVICES=0
+/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/lightning/fabric/__init__.py:29: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__("pkg_resources").declare_namespace(__name__)
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+archive unpacked in ./
+/home/mcn26/project_pi_skr2/mcn26/boda2/src/vcf_predict_indel.py:86: FutureWarning: We've integrated functorch into PyTorch. As the final step of the integration, `functorch.combine_state_for_ensemble` is deprecated as of PyTorch 2.0 and will be deleted in a future version of PyTorch >= 2.3. Please use `torch.func.stack_module_state` instead; see the PyTorch 2.0 release notes and/or the `torch.func` migration guide for more details https://pytorch.org/docs/main/func.migrating.html
+  self.fmodel, self.params, self.buffers = combine_state_for_ensemble(models)
+pre-reading fasta into memory
+  0%|          | 0/44284892 [00:00<?, ?it/s]  1%|▏         | 649368/44284892 [00:00<00:06, 6493438.49it/s]  3%|▎         | 1455581/44284892 [00:00<00:05, 7416053.02it/s]  5%|▌         | 2267345/44284892 [00:00<00:05, 7736300.51it/s]  7%|▋         | 3077904/44284892 [00:00<00:05, 7881995.59it/s]  9%|▊         | 3866104/44284892 [00:00<00:05, 7617287.95it/s] 11%|█         | 4701927/44284892 [00:00<00:05, 7863491.06it/s] 13%|█▎        | 5542452/44284892 [00:00<00:04, 8037838.07it/s] 14%|█▍        | 6388313/44284892 [00:00<00:04, 8170256.08it/s] 16%|█▋        | 7242959/44284892 [00:00<00:04, 8286969.28it/s] 18%|█▊        | 8100129/44284892 [00:01<00:04, 8374379.70it/s] 20%|██        | 8959684/44284892 [00:01<00:04, 8441756.61it/s] 22%|██▏       | 9823235/44284892 [00:01<00:04, 8500496.33it/s] 24%|██▍       | 10686823/44284892 [00:01<00:03, 8541380.03it/s] 26%|██▌       | 11550423/44284892 [00:01<00:03, 8569872.82it/s] 28%|██▊       | 12417833/44284892 [00:01<00:03, 8601223.09it/s] 30%|███       | 13287470/44284892 [00:01<00:03, 8629804.64it/s] 32%|███▏      | 14154528/44284892 [00:01<00:03, 8642001.24it/s] 34%|███▍      | 15026732/44284892 [00:01<00:03, 8666003.97it/s] 36%|███▌      | 15895732/44284892 [00:01<00:03, 8673149.88it/s] 38%|███▊      | 16763077/44284892 [00:02<00:03, 8514129.30it/s] 40%|███▉      | 17615161/44284892 [00:02<00:03, 8198046.79it/s] 42%|████▏     | 18437628/44284892 [00:02<00:03, 7919086.48it/s] 44%|████▎     | 19288338/44284892 [00:02<00:03, 8086783.18it/s] 45%|████▌     | 20141177/44284892 [00:02<00:02, 8214595.04it/s] 47%|████▋     | 21001149/44284892 [00:02<00:02, 8327244.97it/s] 49%|████▉     | 21864379/44284892 [00:02<00:02, 8417121.43it/s] 51%|█████▏    | 22724177/44284892 [00:02<00:02, 8470661.88it/s] 53%|█████▎    | 23591318/44284892 [00:02<00:02, 8530320.98it/s] 55%|█████▌    | 24460604/44284892 [00:02<00:02, 8578741.02it/s] 57%|█████▋    | 25330944/44284892 [00:03<00:02, 8615933.11it/s] 59%|█████▉    | 26198458/44284892 [00:03<00:02, 8633570.77it/s] 61%|██████    | 27069170/44284892 [00:03<00:01, 8655517.63it/s] 63%|██████▎   | 27942054/44284892 [00:03<00:01, 8677441.02it/s] 65%|██████▌   | 28810036/44284892 [00:03<00:01, 8678113.05it/s] 67%|██████▋   | 29677969/44284892 [00:03<00:01, 8303143.95it/s] 69%|██████▉   | 30511784/44284892 [00:03<00:01, 8278659.11it/s] 71%|███████   | 31342047/44284892 [00:03<00:01, 7969803.95it/s] 73%|███████▎  | 32178512/44284892 [00:03<00:01, 8082970.21it/s] 75%|███████▍  | 33032499/44284892 [00:03<00:01, 8215690.22it/s] 77%|███████▋  | 33889933/44284892 [00:04<00:01, 8320822.52it/s] 78%|███████▊  | 34751724/44284892 [00:04<00:01, 8408490.74it/s] 80%|████████  | 35615933/44284892 [00:04<00:01, 8477758.99it/s] 82%|████████▏ | 36474863/44284892 [00:04<00:00, 8510928.48it/s] 84%|████████▍ | 37343894/44284892 [00:04<00:00, 8564404.26it/s] 86%|████████▋ | 38212894/44284892 [00:04<00:00, 8601892.72it/s] 88%|████████▊ | 39082242/44284892 [00:04<00:00, 8629217.82it/s] 90%|█████████ | 39953321/44284892 [00:04<00:00, 8653602.67it/s] 92%|█████████▏| 40818910/44284892 [00:04<00:00, 8653060.42it/s] 94%|█████████▍| 41691057/44284892 [00:04<00:00, 8673521.37it/s] 96%|█████████▌| 42558524/44284892 [00:05<00:00, 8660775.90it/s] 98%|█████████▊| 43424685/44284892 [00:05<00:00, 8102124.99it/s]100%|█████████▉| 44242206/44284892 [00:05<00:00, 7917296.15it/s]100%|██████████| 44284892/44284892 [00:05<00:00, 8341045.19it/s]
+finding keys
+parsing
+  0%|          | 0/195 [00:00<?, ?it/s]  1%|          | 1/195 [00:26<1:24:19, 26.08s/it]  1%|          | 2/195 [00:51<1:22:58, 25.80s/it]  2%|▏         | 3/195 [01:12<1:15:58, 23.74s/it]  2%|▏         | 4/195 [01:33<1:11:26, 22.44s/it]  3%|▎         | 5/195 [01:52<1:07:45, 21.40s/it]  3%|▎         | 6/195 [02:11<1:04:12, 20.38s/it]  4%|▎         | 7/195 [02:28<1:00:20, 19.26s/it]  4%|▍         | 8/195 [02:43<56:26, 18.11s/it]    5%|▍         | 9/195 [02:58<52:48, 17.03s/it]  5%|▌         | 10/195 [03:13<50:00, 16.22s/it]  6%|▌         | 11/195 [03:27<48:07, 15.70s/it]  6%|▌         | 12/195 [03:41<46:35, 15.27s/it]  7%|▋         | 13/195 [03:53<43:26, 14.32s/it]  7%|▋         | 14/195 [04:05<40:27, 13.41s/it]  8%|▊         | 15/195 [04:15<37:46, 12.59s/it]  8%|▊         | 16/195 [04:25<34:51, 11.68s/it]  9%|▊         | 17/195 [04:34<32:09, 10.84s/it]  9%|▉         | 18/195 [04:43<29:57, 10.16s/it] 10%|▉         | 19/195 [04:49<26:19,  8.98s/it] 10%|█         | 20/195 [04:56<24:19,  8.34s/it] 11%|█         | 21/195 [05:00<21:10,  7.30s/it] 11%|█▏        | 22/195 [05:06<19:17,  6.69s/it] 12%|█▏        | 23/195 [05:23<27:51,  9.72s/it] 12%|█▏        | 24/195 [05:28<24:15,  8.51s/it] 18%|█▊        | 36/195 [05:28<03:41,  1.39s/it] 23%|██▎       | 45/195 [05:28<01:51,  1.35it/s] 27%|██▋       | 53/195 [05:29<01:06,  2.13it/s] 30%|███       | 59/195 [05:29<00:47,  2.88it/s] 47%|████▋     | 92/195 [05:29<00:11,  9.13it/s] 87%|████████▋ | 170/195 [05:29<00:00, 29.60it/s]100%|██████████| 195/195 [05:29<00:00,  1.69s/it]
+done
+loading DataFrame
+Traceback (most recent call last):
+  File "/home/mcn26/project_pi_skr2/mcn26/boda2/src/vcf_predict_indel.py", line 537, in <module>
+    main(args)
+  File "/home/mcn26/project_pi_skr2/mcn26/boda2/src/vcf_predict_indel.py", line 286, in main
+    vcf = boda.data.VCF(
+          ^^^^^^^^^^^^^^
+  File "/nfs/roberts/project/pi_skr2/mcn26/boda2/boda/data/fasta_datamodule.py", line 956, in __init__
+    self.vcf = self._open_vcf()
+               ^^^^^^^^^^^^^^^^
+  File "/nfs/roberts/project/pi_skr2/mcn26/boda2/boda/data/fasta_datamodule.py", line 974, in _open_vcf
+    data = pd.read_csv(self.vcf_path, sep='\t', comment='#', header=None, usecols=[0,1,2,3,4])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/mcn26/.conda/envs/boda_cu128/lib/python3.11/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mcn26/scratch_pi_skr2/mcn26/munged_indel/chr1_chunk_194.tsv'
+[+] Finished!
