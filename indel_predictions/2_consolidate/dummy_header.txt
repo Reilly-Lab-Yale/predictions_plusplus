@@ -23,6 +23,7 @@
 ##contig=<ID=chr19,length=58617616,assembly=gnomAD_GRCh38>
 ##contig=<ID=chr20,length=64444167,assembly=gnomAD_GRCh38>
 ##contig=<ID=chr21,length=46709983,assembly=gnomAD_GRCh38>
+##contig=<ID=chr22,length=50818468,assembly=gnomAD_GRCh38>
 ##contig=<ID=chrX,length=156040895,assembly=gnomAD_GRCh38>
 ##contig=<ID=chrY,length=57227415,assembly=gnomAD_GRCh38>
 ##contig=<ID=chrM,length=16569,assembly=gnomAD_GRCh38>
